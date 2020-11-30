@@ -4,8 +4,69 @@
     <meta charset="utf-8">
     <title>Airlines!!</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
+    <header>
+      <h1>PUERTO RICO AIRLINES</h1>
+      <div id="menu">
+        <button>HOME</button>
+        <button>FLIGHTS</button>
+        <button>SUPPORT</button>
+        <button>LOGIN</button>
+      </div>
+    </header>
+    <div id="main">
+      <div class="card">
+        <h3>Flights</h3>
+        <p>Come check out or sweet flights! Direct flights available daily!</p>
+        <button onclick="bookFlight()">Lets go</button>
+      </div>
+      <div class="card">
+        <h3>Group Trips</h3>
+        <p>We offer great group rates! For families with 4 members to huge gatherings with 50+!</p>
+        <button onclick="showRates()">Group Rates</button>
+      </div>
+      <div class="card">
+        <h3>Discount Flights</h3>
+        <p>Discount flights available for individuals! Single chair filler tickets for low rates!</p>
+        <button onclick="jumpIn()">Jump in</button>
+      </div>
 
+      <form id="bookingForm" style="display: none;">
+        <div class="card">
+          <lable for="fname">First Name</lable>
+          <br>
+          <input type="text" id="fname" name="fname" placeholder="Enter Your First Name">
+          <br>
+          <label for="lname">Last Name</label>
+          <br>
+          <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name">
+          <br>
+
+          <select name="city" id="city">
+            <option value="San Juan">San Juan</option>
+            <option value="Bayamon">Bayamon</option>
+            <option value="Carolina">Carolina</option>
+            <option value="Ponce">Ponce</option>
+            <option value="Caguas">Caguas</option>
+          </select>
+
+          <button onclick="onSubmit()">Book It</button>
+        </div>
+      </form>
+
+      <div id="rates" style="display: none;">
+        <div class="card" dis>
+          <h3>Group Rates</h3>
+          <p>200 bucks if you've got more than 5 people</p>
+        </div>
+      </div>
+      <div class="card large-card">
+        <h3>About us</h3>
+        <p class="learn-more">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button id="learn-more-btn" onclick="displayInfo()">Learn More</button>
+      </div>
+    </div>
   </body>
 </html>
